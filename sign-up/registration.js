@@ -77,7 +77,7 @@ LastName.addEventListener("keyup", function () {
 })
 
 //last name field
-let familyname = document.getElementById("familyname");
+let familyname = document.getElementById("family-name");
 familyname.addEventListener("focus", function () {
     document.getElementById("faNameP").style.display = "block";
 })
