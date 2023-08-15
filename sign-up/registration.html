@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sign up</title>
+  <link rel="stylesheet" href="registration.css">
+
+</head>
+
+
+
+<body>
+  <div class="landing-page">
+    <video autoplay muted loop>
+      <source src="../video/nature_-_31377 (1440p).mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="content">
+      <span class="icon-close"><a href="../home-page/home.html"><ion-icon
+            name="arrow-back-outline"></ion-icon></a></span>
+      <h3>Sign Up</h3>
+      <div id="form-and-img">
+        <div class="the-form">
+          <form action="../conn.php" method="post">
+
+
+            <div class="form-group">
+              <label for="fname">Full Name</label>
+              <input action="../conn.php" method="post" class="input" type="text" id="fname" name="fname" placeholder="First" required>
+
+
+              <input class="input" type="text" id="mname" name="mname" placeholder="Middle" required>
+
+              <input class="input" type="text" id="lname" name="lname" placeholder="Last" required>
+
+              <input class="input" type="text" id="family-name" name="family-name" placeholder="Family" required>
+              
+                <div class="letter">
+                  <p id="fNameP" class="invalid">
+                <b>letters Only (3 leters minimum)</b>
+              </p>
+              <p id="mNameP" class="invalid">
+                <b>letters Only (3 leters minimum)</b>
+              </p>
+              </p>
+              <p id="lNameP" class="invalid">
+                <b>letters Only (3 leters minimum)</b>
+              </p>
+              <p id="faNameP" class="invalid">
+                <b>letters Only (3 leters minimum)</b>
+              </p></div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <p id="emailP" class="invalid"><b>example@mail.com</b></p>
+
+
+            <div class="form-group">
+              <label for="mobile">Mobile:</label>
+              <input type="tel" id="mobile" name="mobile" pattern="[0-9]{14}" required>
+            </div>
+            <p id="mobilep" class="invalid">
+              <b>number</b> Only (14 number)
+            </p>
+
+
+
+            <div class="form-group">
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" minlength="8" required>
+            </div>
+            <div class="letter">
+              <p id="capitalPass" class="invalid"><b>Uppercase letter</b></p>
+              <p id="letterPass" class="invalid"><b>lowercase letter</b></p>
+              <p id="numberPass" class="invalid"><b>number</b></p>
+              <p id="lengthPass" class="invalid"><b>(8-32) characters</b></p>
+            </div>
+
+
+            <div class="form-group">
+              <label for="password-confirm">Confirm Password:</label>
+              <input type="password" id="password-confirm" name="password-confirm" required>
+            </div>
+            <p id="confPassP" class="invalid">
+              <b>Must Match with Password</b>
+            </p>
+
+            <div class="form-group">
+              <label for="dob-day">Date of Birth:</label>
+              <input type="number" id="dobday" name="dob-day" placeholder="Day" min="1" max="31" required>
+              <input type="number" id="dobmonth" name="dob-month" placeholder="Month" min="1" max="12" required>
+              <input type="number" id="dobyear" name="dob-year" placeholder="Year" min="1900" max="2007" required>
+              <div class="error-message" id="dob-error"></div>
+
+            </div>
+
+            <button type="button" class="submit-btn" id="buttonID">Sign Up</button>
+
+          </form>
+        </div>
+        <p class="login">already have an account? <a href="../sign-in/sign-in.html"> sign-in</a></p>
+
+      </div>
+    </div>
+
+  </div>
+  <script src="./registration.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
