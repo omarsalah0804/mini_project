@@ -23,33 +23,33 @@
       <h3>Sign Up</h3>
       <div id="form-and-img">
         <div class="the-form">
-          <form action="../conn.php" method="post">
+          <form action="" method="post">
 
 
             <div class="form-group">
               <label for="fname">Full Name</label>
-              <input action="../conn.php" method="post" class="input" type="text" id="fname" name="fname" placeholder="First" required>
+              <input class="input" type="text" id="fname" name="firstName" placeholder="First" required>
+              
 
+              <input class="input" type="text" id="mname" name="middleName" placeholder="Middle" required>
 
-              <input class="input" type="text" id="mname" name="mname" placeholder="Middle" required>
+              <input class="input" type="text" id="lname" name="lastName" placeholder="Last" required>
 
-              <input class="input" type="text" id="lname" name="lname" placeholder="Last" required>
-
-              <input class="input" type="text" id="family-name" name="family-name" placeholder="Family" required>
+              <input class="input" type="text" id="family" name="familyname" placeholder="Family" required>
               
                 <div class="letter">
-                  <p id="fNameP" class="invalid">
-                <b>letters Only (3 leters minimum)</b>
+                  <p id="fnameP" class="invalid">
+                <b>letters Only</b>
               </p>
-              <p id="mNameP" class="invalid">
-                <b>letters Only (3 leters minimum)</b>
+              <p id="mnameP" class="invalid">
+                <b>letters Only</b>
               </p>
               </p>
-              <p id="lNameP" class="invalid">
-                <b>letters Only (3 leters minimum)</b>
+              <p id="lnameP" class="invalid">
+                <b>letters Only</b>
               </p>
-              <p id="faNameP" class="invalid">
-                <b>letters Only (3 leters minimum)</b>
+              <p id="famnameP" class="invalid">
+                <b>letters Only</b>
               </p></div>
             </div>
             <div class="form-group">
@@ -63,8 +63,8 @@
               <label for="mobile">Mobile:</label>
               <input type="tel" id="mobile" name="mobile" pattern="[0-9]{14}" required>
             </div>
-            <p id="mobilep" class="invalid">
-              <b>number</b> Only (14 number)
+            <p id="mobileNumP" class="invalid">
+              <b>number Only (14 number)</b>
             </p>
 
 
@@ -83,7 +83,7 @@
 
             <div class="form-group">
               <label for="password-confirm">Confirm Password:</label>
-              <input type="password" id="password-confirm" name="password-confirm" required>
+              <input type="password" id="confPassword" name="password-confirm" required>
             </div>
             <p id="confPassP" class="invalid">
               <b>Must Match with Password</b>
@@ -91,14 +91,13 @@
 
             <div class="form-group">
               <label for="dob-day">Date of Birth:</label>
-              <input type="number" id="dobday" name="dob-day" placeholder="Day" min="1" max="31" required>
-              <input type="number" id="dobmonth" name="dob-month" placeholder="Month" min="1" max="12" required>
-              <input type="number" id="dobyear" name="dob-year" placeholder="Year" min="1900" max="2007" required>
-              <div class="error-message" id="dob-error"></div>
+              <input type="date" id="bdate" name="bdate"><br/>
+              <p id="dateP" class="invalid">
+                  <b>Greater than 16 years old</b>
 
             </div>
 
-            <button type="button" class="submit-btn" id="buttonID">Sign Up</button>
+            <button type="button" class="submit-btn" id="submitBtn">Sign Up</button>
 
           </form>
         </div>

@@ -66,4 +66,5 @@ video {
 .links a:hover {
     background-color: white;
     color: #333;
+    font-size: 2.4rem;
 }
