@@ -12,8 +12,6 @@ let bdateFlag=0;
 let up=0;
 let lw=0;
 let nm=0;
-let sp=0;
-let sc=0;
 let lg=0;
 
 
@@ -212,7 +210,7 @@ password.addEventListener("keyup",function(){
     } else {
         lengthPass.classList.remove("valid");
         lengthPass.classList.add("invalid");
-    }if(up && lw && nm && sp && sc && lg){
+    }if(up && lw && nm  && lg){
         passwordFlag=1;
     }
 })
@@ -328,7 +326,7 @@ btn.addEventListener("click",function(event){
     if(firstNameFlag && middleNameFlag && lastNameFlag && familyNameFlag && emailFlag && mobileFlag && passwordFlag && confPasswordFlag && bdateFlag ){
         event.preventDefault();
         bdate=new Date(bdate.value);
-        fetch("create.php",{
+        fetch("../create.php",{
             method: "POST",
             headers:{
                 "Content-Type":"application/json",
@@ -356,7 +354,7 @@ btn.addEventListener("click",function(event){
                 email.value="";
                 mobile.value="";
                 password.value="";
-                window.location.href='../sign-in/sign-in.html';
+                window.location.href="../sign-in/sign-in.html";
             }
         })
         .catch(error=>{
