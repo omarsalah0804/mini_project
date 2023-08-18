@@ -21,7 +21,7 @@
         <p>Sign In</p>
         <div id="form-and-img">
           <div class="the-form">
-            <form>
+            <form method="POST" id="loginFormID">
               <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" required />
@@ -39,10 +39,8 @@
                 />
                 <div class="error-message" id="password-error"></div>
               </div>
-
-              <button type="button" class="submit-btn" onclick="validateForm()">
-                Sign In
-              </button>
+              <input type="submit" id="submitBtn" class="submit-btn" value="Login"/>
+            
             </form>
           </div>
           <p class="login">
@@ -52,6 +50,7 @@
         </div>
       </div>
     </div>
+    <script src="./sign-in.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
