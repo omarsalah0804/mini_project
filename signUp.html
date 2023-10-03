@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cloud Bird | SignUp Page </title>
+
+    <link rel="stylesheet" href="./signUp.css" />
+
+</head>
+
+<body>
+    <div class="landing-page">
+        <video autoplay muted loop>
+            <source src="./video/nature_-_31377 (1440p).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="content">
+            <span class="icon-close"><a href="./index.html"><ion-icon
+                        name="arrow-back-outline"></ion-icon></a></span>
+            <h3>Sign Up</h3>
+            <div id="form-and-img">
+                <div class="the-form">
+                    <form action="" method="POST" id="signUpForm">
+                        <div class="form-group">
+                            <label for="fname">Full Name</label>
+
+                            <input type="text" class="input" name="fname" id="fname" placeholder="First" required />
+
+                            <input type="text" class="input" name="mname" id="mname" placeholder="Middle" required />
+
+                            <input type="text" class="input" name="lname" id="lname" placeholder="Last" required />
+
+                            <input type="text" class="input" name="family" id="family" placeholder="Family" required />
+
+
+
+                            <div class="letter">
+                                <p id="fnameP" class="invalid">
+                                    <b>letters Only</b>
+                                </p>
+                                <p id="mnameP" class="invalid">
+                                    <b>letters Only</b>
+                                </p>
+                                </p>
+                                <p id="lnameP" class="invalid">
+                                    <b>letters Only</b>
+                                </p>
+                                <p id="famnameP" class="invalid">
+                                    <b>letters Only</b>
+                                </p>
+                            </div>
+
+
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <p id="emailP" class="invalid"><b>example@mail.com</b></p>
+
+                        <div class="form-group">
+                            <label for="mobile">Mobile:</label>
+                            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{14}" required>
+                        </div>
+                        <p id="mobileNumP" class="invalid">
+                            <b>Ex:(009627777777777)</b>
+                        </p>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="letter">
+                            <p id="numberPass" class="invalid">Number</p>
+                            <p id="spacePass" class="valid">No Space</p>
+                            <p id="capitalPass" class="invalid">Uppercaseletter</p>
+                            <p id="letterPass" class="invalid">Lowercase> letter</p>
+                            <p id="lengthPass" class="invalid">(8-32) characters</p>
+                            <p id="spChPass" class="invalid">Special Characters</p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password-confirm">Confirm Password:</label>
+                            <input type="password" name="confPassword" id="confPassword" required />
+                        </div>
+                        <p id="confPassP" class="invalid"><b>Must Match with Password</b></p>
+
+                        <div class="form-group">
+                            <label for="dob-day">Date of Birth:</label>
+                            <input type="date" id="bdate" name="bdate"><br />
+                            <p id="dateP" class="invalid">
+                                <b>Greater than 16 years old</b>
+                            </p>
+                        </div>
+                        <input type="submit" id="submitBtn" class="submit-btn" name="submit" value="Sign Up" /><br />
+                    </form>
+
+                </div>
+                <p class="login">already have an account? <a href="./signIn.html"> sign-in</a></p>
+
+            </div>
+        </div>
+    </div>
+    <script src="./signUp.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

@@ -99,11 +99,25 @@ body {
    border-radius: 7px;
   }
  
-  .error-message {
-    color: red;
-    font-size: 0.8rem;
-    text-align: left;
-  }
+  .p {
+    display: none;
+}
+.valid {
+    color: rgb(181, 255, 181);
+    text-align: center;
+}
+.valid:before {
+    content: "✔ ";
+    text-align: center;
+}
+.invalid {
+    color: rgb(73, 3, 3);
+    text-align: center;
+}
+.invalid:before {
+    content: "✖ ";
+    text-align: center;
+}
   
   .submit-btn {
   color: rgb(255, 255, 255);

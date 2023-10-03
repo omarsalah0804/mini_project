@@ -1,6 +1,6 @@
 <?php
 
-require("./conn.php");
+require("./connect.php");
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     $data=json_decode(file_get_contents("php://input"),true);
@@ -15,8 +15,11 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
             
             }
       
+            // $response['message']="lOGGED IN SUCCESSFULLY";
     }
-
+    // else{
+    //     $response['message']="Email Or Password  Not Valid";
+    // }
     echo json_encode($response);
 }
 $conn->close();

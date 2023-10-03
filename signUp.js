@@ -12,6 +12,8 @@ let bdateFlag=0;
 let up=0;
 let lw=0;
 let nm=0;
+let sp=0;
+let sc=0;
 let lg=0;
 
 
@@ -166,12 +168,16 @@ password.addEventListener("focus",function(){
     document.getElementById("capitalPass").style.display="block";
     document.getElementById("letterPass").style.display="block";
     document.getElementById("numberPass").style.display="block";
+    document.getElementById("spChPass").style.display="block";
+    document.getElementById("spacePass").style.display="block";
     document.getElementById("lengthPass").style.display="block";
 })
 password.addEventListener("blur",function(){
     document.getElementById("capitalPass").style.display="none";
     document.getElementById("letterPass").style.display="none";
     document.getElementById("numberPass").style.display="none";
+    document.getElementById("spChPass").style.display="none";
+    document.getElementById("spacePass").style.display="none";
     document.getElementById("lengthPass").style.display="none";
 })
 password.addEventListener("keyup",function(){    
@@ -202,7 +208,24 @@ password.addEventListener("keyup",function(){
         numberPass.classList.remove("valid");
         numberPass.classList.add("invalid");
     }
-   
+    var noSpace=/^\S*$/;
+    if(password.value.match(noSpace)){
+        spacePass.classList.remove("invalid");
+        spacePass.classList.add("valid");
+        sp=1;
+    } else {
+        spacePass.classList.remove("valid");
+        spacePass.classList.add("invalid");
+    }
+    var special=/[!@#/?\$%\^\&*\)\(+=._-]{1,}/g;
+    if(password.value.match(special)){
+        spChPass.classList.remove("invalid");
+        spChPass.classList.add("valid");
+        sc=1;
+    } else {
+        spChPass.classList.remove("valid");
+        spChPass.classList.add("invalid");
+    }
     if(password.value.length >= 8 && password.value.length<=32) {
         lengthPass.classList.remove("invalid");
         lengthPass.classList.add("valid");
@@ -210,7 +233,7 @@ password.addEventListener("keyup",function(){
     } else {
         lengthPass.classList.remove("valid");
         lengthPass.classList.add("invalid");
-    }if(up && lw && nm  && lg){
+    }if(up && lw && nm && sp && sc && lg){
         passwordFlag=1;
     }
 })
@@ -313,6 +336,8 @@ btn.addEventListener("click",function(event){
         document.getElementById("capitalPass").style.display="block";
         document.getElementById("letterPass").style.display="block";
         document.getElementById("numberPass").style.display="block";
+        document.getElementById("spChPass").style.display="block";
+        document.getElementById("spacePass").style.display="block";
         document.getElementById("lengthPass").style.display="block";
     }
     if(confPasswordFlag==0){
@@ -326,7 +351,7 @@ btn.addEventListener("click",function(event){
     if(firstNameFlag && middleNameFlag && lastNameFlag && familyNameFlag && emailFlag && mobileFlag && passwordFlag && confPasswordFlag && bdateFlag ){
         event.preventDefault();
         bdate=new Date(bdate.value);
-        fetch("../create.php",{
+        fetch("create.php",{
             method: "POST",
             headers:{
                 "Content-Type":"application/json",
@@ -354,7 +379,7 @@ btn.addEventListener("click",function(event){
                 email.value="";
                 mobile.value="";
                 password.value="";
-                window.location.href="../sign-in/sign-in.html";
+                window.location.href='./signIn.html';
             }
         })
         .catch(error=>{

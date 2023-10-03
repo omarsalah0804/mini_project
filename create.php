@@ -1,5 +1,5 @@
 <?php
-require("./conn.php");
+require("./connect.php");
 header("Content-Type: application/json");
 
 
