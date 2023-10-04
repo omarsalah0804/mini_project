@@ -66,8 +66,12 @@ if(flag==0){
             userDiv.appendChild(createDateP);
             userDiv.appendChild(lastLoginP);
             superDiv.appendChild(userDiv);
-            // userDiv.style.border='1px solid black';
-            // userDiv.style.padding='1%';
+            userDiv.style.border='2px solid white';
+            userDiv.style.padding='5px';
+            userDiv.style.textShadow='1px 1px 6px black';
+            userDiv.style.boxShadow='1px 1px 20px black';
+            userDiv.style.borderRadius='17px';
+            
             //.................table view...............
             // let userRow = document.createElement('tr');
             // let idD = document.createElement('td');

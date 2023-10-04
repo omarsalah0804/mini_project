@@ -72,11 +72,13 @@ video {
     width: 100%;
     margin: 50px 0;
     font-weight: bolder;
+    text-shadow: 1px 1px 10px black;
 }
 .data{
     font-size: 1.5rem;
     display: block;
+    text-shadow: 1px 1px 10px black;
     width: 100%;
-    color: #3b3d18;
+    color: white;
     font-weight: 700;
 }

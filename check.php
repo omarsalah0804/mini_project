@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
        $sql="UPDATE `soo` SET `lastLogin`='$date' WHERE `email`='$email' AND `password`='$password'";
        $updateQuery=$conn->query($sql);
             while($row=$result->fetch_assoc()){
-                $response['soo']=$row;
+                $response['user']=$row;
             
             }
       

@@ -65,6 +65,7 @@ body {
   
   p{
     font-size: 3rem;
+    text-shadow: 1px 1px 10px black;
     border: 0px;
     display:block;
     margin:1% auto; 
@@ -84,6 +85,7 @@ body {
   label {
     display:block;
    font-weight: bold;
+   text-shadow: 1px 1px 10px black;
    font-size: 20px;
    margin: 10px;
   }
@@ -96,6 +98,8 @@ body {
    font-size: 1.2em;
    text-align: center;
    border: 1px solid #ccc;
+   text-shadow: 1px 1px 6px black;
+   box-shadow: 1px 1px 20px black;
    border-radius: 7px;
   }
  
@@ -124,7 +128,9 @@ body {
       text-decoration: none;
       margin:15px 0;
       font-size: 1.8rem;
-      border: 3px solid white;
+      text-shadow: 1px 1px 6px black;
+      box-shadow: 1px 1px 20px black;
+      border: 2px solid white;
       padding: 10px 20px;
       border-radius: 17px;
       background: transparent;
@@ -135,7 +141,6 @@ body {
   .submit-btn:hover {
       background-color: white;
       color: #333;
-      font-size: 1.9em;
   }
   .login{
     font-size: 1.0rem;
@@ -152,6 +157,8 @@ body {
     font-size: 1.0rem;
     border: 2px rgb(255, 255, 255) solid;
     padding: 4px;
+    text-shadow: 1px 1px 6px black;
+    box-shadow: 1px 1px 20px black;
     border-radius: 20px;
     color: white;
     text-decoration: none;
