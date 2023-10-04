@@ -68,6 +68,7 @@ if(flag==0){
             superDiv.appendChild(userDiv);
             userDiv.style.border='2px solid white';
             userDiv.style.padding='5px';
+            userDiv.style.margin='20px auto';
             userDiv.style.textShadow='1px 1px 6px black';
             userDiv.style.boxShadow='1px 1px 20px black';
             userDiv.style.borderRadius='17px';
