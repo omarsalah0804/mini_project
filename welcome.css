@@ -23,6 +23,7 @@ video {
 .content {
     position: static;
     margin: auto;
+    justify-content: center;
     text-align: center;
     color: white;
     width: 60%;

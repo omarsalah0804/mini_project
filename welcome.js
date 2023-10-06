@@ -47,7 +47,7 @@ if(flag==0){
             let emailP = document.createElement('p');
             let passwordP = document.createElement('p');
             let birthDateP = document.createElement('p');
-            let createDateP = document.createElement('p');
+            // let createDateP = document.createElement('p');
             let lastLoginP = document.createElement('p');
 
             idP.textContent ="ID : " + element['id'];
@@ -55,7 +55,7 @@ if(flag==0){
             emailP.textContent="Email : " + element['email'];
             passwordP.textContent="Password : " + element['password'];
             birthDateP.textContent="BirthDate : " + element['bDate'];
-            createDateP.textContent="Create Date : " + element['createDate'];
+            // createDateP.textContent="Create Date : " + element['createDate'];
             lastLoginP.textContent="Last Login : " + element['lastLogin'];
 
             userDiv.appendChild(idP);
@@ -63,7 +63,7 @@ if(flag==0){
             userDiv.appendChild(emailP);
             userDiv.appendChild(passwordP);
             userDiv.appendChild(birthDateP);
-            userDiv.appendChild(createDateP);
+            // userDiv.appendChild(createDateP);
             userDiv.appendChild(lastLoginP);
             superDiv.appendChild(userDiv);
             userDiv.style.border='2px solid white';
